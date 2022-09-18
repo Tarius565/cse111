@@ -25,7 +25,7 @@ def main():
     draw_sky(canvas, scene_width, scene_height)
     draw_ground(canvas, scene_width, scene_height)
 
-    draw_grid(canvas, scene_width, scene_height, 50)
+    # draw_grid(canvas, scene_width, scene_height, 50)
     # Call the finish_drawing function
     # in the draw2d.py library.
     finish_drawing(canvas)
@@ -88,18 +88,18 @@ def draw_tree(canvas, scene_width, scene_height, height):
             skirt_right = center_x + skirt_width / 2
             draw_polygon(canvas, skirt_left, skirt_bottom, peak_x, peak_y, skirt_right, skirt_bottom, fill="forestGreen")
 
-def draw_grid(canvas, width, height, interval, color="blue"):
-    # Draw a vertical line at every x interval.
-    label_y = 15
-    for x in range(interval, width, interval):
-        draw_line(canvas, x, 0, x, height, fill=color)
-        draw_text(canvas, x, label_y, f"{x}", fill=color)
+# def draw_grid(canvas, width, height, interval, color="blue"):
+#     # Draw a vertical line at every x interval.
+#     label_y = 15
+#     for x in range(interval, width, interval):
+#         draw_line(canvas, x, 0, x, height, fill=color)
+#         draw_text(canvas, x, label_y, f"{x}", fill=color)
 
-    # Draw a horizontal line at every y interval.
-    label_x = 15
-    for y in range(interval, height, interval):
-        draw_line(canvas, 0, y, width, y, fill=color)
-        draw_text(canvas, label_x, y, f"{y}", fill=color)
+#     # Draw a horizontal line at every y interval.
+#     label_x = 15
+#     for y in range(interval, height, interval):
+#         draw_line(canvas, 0, y, width, y, fill=color)
+#         draw_text(canvas, label_x, y, f"{y}", fill=color)
 
 
 
