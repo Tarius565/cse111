@@ -7,7 +7,14 @@ import random
 
 
 def main():
-    pass
+    tense = ['past', 'present', 'future']
+    for i in range (2):
+        for j in range(3):
+            determ = get_determiner(i+1)
+            noun = get_noun(i+1)
+            verb = get_verb(i+1, tense[j])
+
+            print(f"{determ} {noun} {verb}")
 
 def get_determiner(quantity):
     """Return a randomly chosen determiner. A determiner is
@@ -49,6 +56,15 @@ def get_noun(quantity):
             the returned noun is single or plural.
     Return: a randomly chosen noun.
     """
+    if quantity == 1:
+        nouns = ["bird", "boy", "car", "cat", "child", \
+            "dog", "girl", "man", "rabbit", "woman"]
+    else:
+        nouns = ["birds", "boys", "cars", "cats", "children",\
+            "dogs", "girls", "men", "rabbits", "women"]
+
+    noun = random.choice(nouns)
+    return noun
 
 def get_verb(quantity, tense):
     """Return a randomly chosen verb. If tense is "past",
@@ -76,6 +92,22 @@ def get_verb(quantity, tense):
             either "past", "present" or "future".
     Return: a randomly chosen verb.
     """
-    
+    if tense == 'past':
+        verbs = ["drank", "ate", "grew", "laughed", "thought",\
+            "ran", "slept", "talked", "walked", "wrote"]
+    elif tense == 'present' and quantity == 1:
+        verbs = ["drinks", "eats", "grows", "laughs", "thinks",\
+            "runs", "sleeps", "talks", "walks", "writes"]
+    elif tense == 'present' and quantity != 1:
+        verbs = ["drink", "eat", "grow", "laugh", "think",\
+            "run", "sleep", "talk", "walk", "write"]
+    else:
+        verbs = ["will drink", "will eat", "will grow", "will laugh",\
+            "will think", "will run", "will sleep", "will talk",\
+                "will walk", "will write"]
+
+    verb = random.choice(verbs)
+    return verb
+
 if __name__ == "__main__":
     main()
