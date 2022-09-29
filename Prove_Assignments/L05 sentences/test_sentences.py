@@ -2,7 +2,8 @@
 author: Tanner Levi
 """
 
-from sentences import get_determiner, get_noun, get_verb
+from sentences import get_determiner, get_noun, get_verb,\
+     get_preposition, get_prepositional_phrase
 import random
 import pytest
 
@@ -126,6 +127,63 @@ def test_get_verb():
 
         # Verify the returned verb is on the list
         assert verb in future_verbs
+
+def test_get_preposition():
+    # 1. Test the prepositions
+    preps = ["about", "above", "across", "after", "along",\
+        "around", "at", "before", "behind", "below",\
+            "beyond", "by", "despite", "except", "for",\
+                "from", "in", "into", "near", "of",\
+                    "off", "on", "onto", "out", "over",\
+                        "past", "to", "under", "with", "without"]
+    
+    # repeats 5 times.
+    for _ in range(5):
+
+        # Call get_preposition function to return a preposition
+        prep = get_preposition()
+
+        # Verify that prep is on the list
+        assert prep in preps
+
+def test_get_prepositional_phrase():
+    # 1. Test that the prepositional phrase has the correct quantity
+    single_determiners = ["a", "one", "the"]
+
+    plural_determiners = ["some", "many", "the"]
+
+    single_nouns = ["bird", "boy", "car", "cat", "child", \
+            "dog", "girl", "man", "rabbit", "woman"]
+ 
+    plural_nouns = ["birds", "boys", "cars", "cats", "children",\
+            "dogs", "girls", "men", "rabbits", "women"]
+
+    prepositions = ["about", "above", "across", "after", "along",\
+    "around", "at", "before", "behind", "below",\
+        "beyond", "by", "despite", "except", "for",\
+            "from", "in", "into", "near", "of",\
+                "off", "on", "onto", "out", "over",\
+                    "past", "to", "under", "with", "without"]
+
+    # repeats 10 times
+    for _ in range(10):
+
+        # Call get_prepositional_phrase to return single and plural
+        prep = get_prepositional_phrase(1)
+        preps = get_prepositional_phrase(2)
+
+        # Verify that the length of the list 3
+        assert len(prep) == 3
+        assert len(preps) == 3
+
+        # Verify that the singular and plural parts are in the lists
+        assert prep[0] in prepositions
+        assert prep[1] in single_determiners
+        assert prep[2] in single_nouns
+
+        assert preps[0] in prepositions
+        assert preps[1] in plural_determiners
+        assert preps[2] in plural_nouns
 
 # Call the main function that is part of pytest so that the
 # computer will execute the test functions in this file.

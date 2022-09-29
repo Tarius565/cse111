@@ -13,8 +13,10 @@ def main():
             determ = get_determiner(i+1)
             noun = get_noun(i+1)
             verb = get_verb(i+1, tense[j])
-
-            print(f"{determ} {noun} {verb}")
+            prep = get_prepositional_phrase(i+1)
+            prep2 = get_prepositional_phrase(1)
+            
+            print(f"{determ} {noun} {prep2[0]} {prep2[1]} {prep2[2]} {verb} {prep[0]} {prep[1]} {prep[2]}")
 
 def get_determiner(quantity):
     """Return a randomly chosen determiner. A determiner is
@@ -108,6 +110,45 @@ def get_verb(quantity, tense):
 
     verb = random.choice(verbs)
     return verb
+
+def get_preposition():
+    """Return a randomly chosen preposition
+    from this list of prepositions:
+        "about", "above", "across", "after", "along",
+        "around", "at", "before", "behind", "below",
+        "beyond", "by", "despite", "except", "for",
+        "from", "in", "into", "near", "of",
+        "off", "on", "onto", "out", "over",
+        "past", "to", "under", "with", "without"
+
+    Return: a randomly chosen preposition.
+    """
+    prepositions = ["about", "above", "across", "after", "along",\
+        "around", "at", "before", "behind", "below",\
+            "beyond", "by", "despite", "except", "for",\
+                "from", "in", "into", "near", "of",\
+                    "off", "on", "onto", "out", "over",\
+                        "past", "to", "under", "with", "without"]
+    
+    preposition = random.choice(prepositions)
+    return preposition
+
+def get_prepositional_phrase(quantity):
+    """Build and return a prepositional phrase composed of three
+    words: a preposition, a determiner, and a noun by calling the
+    get_preposition, get_determiner, and get_noun functions.
+
+    Parameter
+        quantity: an integer that determines if the determiner
+            and noun in the prepositional phrase returned from
+            this function are single or plural.
+    Return: a prepositional phrase.
+    """
+    prep = get_preposition()
+    det = get_determiner(quantity)
+    noun = get_noun(quantity)
+
+    return prep, det, noun
 
 if __name__ == "__main__":
     main()
