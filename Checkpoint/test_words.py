@@ -14,7 +14,7 @@ def test_prefix():
     assert isinstance(pre, str), "prefix function must return a string"
 
     # Call the prefix function ten times and use an assert
-    # statement to verify that the string returned by the
+    # statement to verify that the string returned by thej
     # prefix function is correct each time.
     assert prefix("cat", "catalog") == "cat"
     assert prefix("", "") == ""
