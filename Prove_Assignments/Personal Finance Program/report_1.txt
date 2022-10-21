@@ -1,0 +1,46 @@
+First Report for a Student Chosen Program
+
+    (Please report on your progress toward completing your chosen
+    program by answering the following questions.)
+
+1. In the table below, list the dates, amount of time spent, and
+description of the work that you did on your program. Follow the example
+that is in the first row of the table. Include the time you spent doing
+any of the following:
+    a. discussing your program with your teacher, tutor, or fellow students
+    b. researching by reading articles and watching applicable videos
+    c. designing your program by drawing diagrams and other applicable documents
+    d. writing experimental code
+    d. writing code for your program
+    e. writing test functions
+    f. debugging your code
+    g. any other activity that helped you complete your program
+
+            Time Spent
+   Date       (hours)   Description of Work
+----------  ----------  -------------------------
+2022-10-20      0.5     designing your program by drawing diagrams and other applicable documents
+2022-10-20      1.5     researching by reading articles and watching applicable videos
+2022-10-20      2.0     writing code for your program
+
+
+2. Write the names of the functions in your program.
+    main
+    populate main window
+    enter
+    clear
+
+3. Answer the following questions about the functions in your program.
+    a. Does each function perform a single task?
+
+    b. Does the name of each function describe or convey the task?
+
+    c. Do most of your program functions have parameters and return a result?
+
+    If you answered "no" to any of the above three questions, what are
+    you planning to change in your program?
+
+
+4. Write the names of the test functions that you wrote to test your
+program functions.
+
