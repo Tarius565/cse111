@@ -1,6 +1,6 @@
 
 import tkinter as tk
-from turtle import width
+import number_entry as nent
 
 
 def main():
@@ -35,27 +35,9 @@ def populate_main_window(frm_main):
     btn_clear = tk.Button(frm_main, text="Clear")
     btn_enter = tk.Button(frm_main, text="Enter")
 
-
-
     lsbx_category.grid(row=0, column=0)
     btn_clear.grid(row=1, column=0, ipadx=16, padx=3, pady=3, columnspan=5, sticky="nesw")
     btn_enter.grid(row=1, column=6, ipadx=16, padx=3, pady=3, columnspan=5, sticky="nesw")
-
-    #  # Create a label that displays "Age:"
-    # lbl_age = tk.Label(frm_main, text="Age:")
-
-    # # Create a integer entry box where the user will enter her age.
-    # ent_age = nent.IntEntry(frm_main, 12, 90, width=5)
-
-    # # Create a label that displays "Rates:"
-    # lbl_rates = tk.Label(frm_main, text="Rates:")
-
-    # # Create labels that will display the results.
-    # lbl_slow = tk.Label(frm_main, width=4)
-    # lbl_fast = tk.Label(frm_main, width=4)
-
-    # # Create the Clear button.
-    # btn_clear = tk.Button(frm_main, text="Clear")
 
     # # Layout all the labels, entry boxes, and buttons in a grid.
     # lbl_age.grid(  row=0, column=0, padx=3, pady=3)
@@ -65,6 +47,44 @@ def populate_main_window(frm_main):
     # lbl_fast.grid( row=0, column=4, padx=3, pady=3)
     # btn_clear.grid(row=1, column=0, padx=3, pady=3, columnspan=5, sticky="w")
 
+    def enter(event):
+        """Compute and display the user's slowest
+        and fastest beneficial heart rates.
+        """
+        # try:
+        #     width = ent_width.get()
+        #     length = ent_length.get()
+
+        #     area = width * length
+
+        #     lbl_area_answer.config(text=f"{area:.0f}")
+        #     lbl_status.config(text="")
+
+        # except ValueError:
+        #     lbl_status.config(text="error")
+        #     lbl_area_answer.config(text="")
+
+
+    # This function will be called each time
+    # the user presses the "Clear" button.
+    def clear():
+        """Clear all the inputs and outputs."""
+        # ent_width.delete(0, tk.END)
+        # ent_length.delete(0, tk.END)
+        # lbl_area_answer.config(text="")
+        # lbl_status.config(text="")
+        # ent_width.focus()
+
+
+    # Bind the enter function to the enter button so
+    # that the enter function will be called when the
+    # user clicks the enter button.
+    btn_enter.config(command=enter)
+
+    # Bind the clear function to the clear button so
+    # that the clear function will be called when the
+    # user clicks the clear button.
+    btn_clear.config(command=clear)
 
 
 

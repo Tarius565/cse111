@@ -21,7 +21,7 @@ any of the following:
 ----------  ----------  -------------------------
 2022-10-20      0.5     designing your program by drawing diagrams and other applicable documents
 2022-10-20      1.5     researching by reading articles and watching applicable videos
-2022-10-20      2.0     writing code for your program
+2022-10-20      2.5     writing code for your program
 
 
 2. Write the names of the functions in your program.
@@ -32,10 +32,13 @@ any of the following:
 
 3. Answer the following questions about the functions in your program.
     a. Does each function perform a single task?
+        Yes
 
     b. Does the name of each function describe or convey the task?
+        Yes
 
     c. Do most of your program functions have parameters and return a result?
+        Yes
 
     If you answered "no" to any of the above three questions, what are
     you planning to change in your program?
@@ -43,4 +46,6 @@ any of the following:
 
 4. Write the names of the test functions that you wrote to test your
 program functions.
+    enter_test
+    
 
