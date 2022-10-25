@@ -1,0 +1,9 @@
+category,finance source,category type,amount
+Income,andersen paycheck,Income,3500
+Car,gas,Expenditure,155
+Car,car insurance,Expenditure,385
+Electricity,SRP,Expenditure,120
+Water,Epcor,Expenditure,60
+Mortgage,Mortgage,Expenditure,1500
+Groceries,Groceries,Expenditure,350
+Entertainment,Movies,Expenditure,45

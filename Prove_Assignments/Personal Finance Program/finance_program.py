@@ -89,6 +89,8 @@ def populate_main_window(frm_main):
     # the user changes the "Graph_x" option menu.
     def change_graph(name, amt, amt_type):
         """Changes the graph to view the selected file"""
+        # Clear everything in the canvas before drawing
+        cns_graph.delete("all")
         # The variables below size the bar graph
         y_gap_lower = 10  # The gap between lower canvas edge and x axis
         y_gap_top = 20 # The gap between the top canvas edge and x axis (leaves room for text)
