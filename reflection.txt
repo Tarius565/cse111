@@ -1,0 +1,25 @@
+Please respond thoroughly (at least two sentences for each question) to
+the following three questions.
+
+1. Describe an experience you had this semester where you saw the power of
+functions.
+    Writing nested functions. This came in very handy because a singular function can call 2 or more 
+    functions, and I needed this aspect to run my program.
+
+
+2. In your judgment, what is the value of test functions?
+    I see the need for it. I do need to get better at writing them however. They are helpful for a quick test 
+    to make sure the function you wrote has the required outcome and it can drastically reduce the time 
+    needed for running and testing your own program, especially if the function in question is far within 
+    the program.
+
+
+3. Describe your process for troubleshooting and fixing a program that
+has a problem. What is one thing you can do to improve your process?
+    Currently i run the program and look at the error to see where its at and then i go and fix it.
+    I know this is very inefficient and I said in the second answer that I need to get better at writing
+    test functions for this very reason. It takes a lot of time to run the program, find the error, fix the error,
+    run the program again to see if the error is fixed, fix error if not fixed. This process can easily be changed
+    to be faster by using test functions.
+
+
